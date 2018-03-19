@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "${PROVIDER}_ranges() %>%  normalize_ipv${IP_VERSION}()" >> /assets/bin/cloudcidrs.R
+
+Rscript /assets/bin/cloudcidrs.R
