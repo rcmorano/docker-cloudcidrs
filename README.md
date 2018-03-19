@@ -22,12 +22,3 @@ IP_VERSION=4
 
 docker run --rm -it -e PROVIDER=$PROVIDER -e IP_VERSION=$IP_VERSION emergya/cloudcidrs
 ```
-
-# Run and some parsing (one clean CIDR per line)
-
-```
-PROVIDER=amazon
-IP_VERSION=4
-
-docker run --rm -it -e PROVIDER=$PROVIDER -e IP_VERSION=$IP_VERSION emergya/cloudcidrs | grep -o '".*"' | tr -s ' ' | xargs -rI % echo -e '% \n'
-```
