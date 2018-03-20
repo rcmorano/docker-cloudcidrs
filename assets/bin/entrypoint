@@ -1,5 +1,8 @@
 #!/bin/bash
 
-echo "${PROVIDER}_ranges() %>%  normalize_ipv${IP_VERSION}()" >> /assets/bin/cloudcidrs.R
+case $IP_VERSION in
+  "4") echo "${PROVIDER}_ranges() %>%  normalize_ipv${IP_VERSION}()" >> /assets/bin/cloudcidrs.R ;;
+  "6") echo "IPv6 is not supported yet!"; exit 0 ;;
+esac
 
-Rscript /assets/bin/cloudcidrs.R
+Rscript /assets/bin/cloudcidrs.R | grep -o '".*"' | tr -s ' ' | sed 's|"||g' | sed 's| |\n|g'
