@@ -17,7 +17,7 @@ It supports the same providers as the upstream project and returns back a list o
 # Run
 
 ```
-PROVIDER=amazon
+PROVIDER=google
 IP_VERSION=4
 
 docker run --rm -it -e PROVIDER=$PROVIDER -e IP_VERSION=$IP_VERSION emergya/cloudcidrs
