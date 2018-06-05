@@ -4,7 +4,7 @@ This is a simple docker container wrapper for this project: https://github.com/c
 
 It uses the following docker image as base: https://hub.docker.com/r/zamora/r-devtools/
 
-It supports the same providers as the upstream project and returns back a list of CIDR block for each provider:
+It supports the same providers as the upstream project and returns back a list of CIDR blocks for each provider:
 
 * amazon
 * azure
