@@ -1,6 +1,6 @@
 FROM zamora/r-devtools
 
-ARG BUILD_TIMESTAMP=201903301915
+ARG BUILD_TIMESTAMP=201903301920
 
 RUN echo 'devtools::install_git("https://github.com/cloudyr/cloudcidrs.git")' | /usr/bin/Rscript -
 
